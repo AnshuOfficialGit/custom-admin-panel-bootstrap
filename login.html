@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compact Auth Form</title>
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/login.css">
+</head>
+
+<body>
+    <!-- Login Card -->
+    <div class="card auth-card" id="login-card">
+        <div class="auth-header">
+            <h5 class="mb-0">Welcome back</h5>
+            <p class="mb-0 small opacity-75">Sign in to your account</p>
+        </div>
+        <div class="auth-body">
+            <form>
+                <div class="mb-3 position-relative">
+                    <label for="login-email" class="form-label small">Email</label>
+                    <input type="email" class="form-control" id="login-email" placeholder="email@example.com" required>
+                </div>
+                <div class="mb-3 position-relative">
+                    <label for="login-password" class="form-label small">Password</label>
+                    <input type="password" class="form-control" id="login-password" placeholder="••••••••" required>
+                    <i class="far fa-eye password-toggle" id="toggle-login-password"></i>
+                </div>
+                <div class="d-flex justify-content-between mb-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="remember"
+                            style="width: 14px; height: 14px;">
+                        <label class="form-check-label small" for="remember">Remember me</label>
+                    </div>
+                    <a href="#" class="small text-decoration-none">Forgot password?</a>
+                </div>
+                <a href="./dashboard/dashboard.html" class="btn btn-auth w-100 mb-3 text-white">Sign In</a>
+                <div class="divider small">or continue with</div>
+                <div class="d-flex justify-content-center gap-2 mb-3">
+                    <button type="button" class="social-btn">
+                        <i class="fab fa-google"></i>
+                    </button>
+                    <button type="button" class="social-btn">
+                        <i class="fab fa-apple"></i>
+                    </button>
+                    <button type="button" class="social-btn">
+                        <i class="fab fa-facebook-f"></i>
+                    </button>
+                </div>
+                <div class="text-center small">
+                    Don't have an account? <span class="auth-switch" onclick="showRegister()">Sign up</span>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Register Card (Hidden) -->
+    <div class="card auth-card" id="register-card" style="display: none;">
+        <div class="auth-header">
+            <h5 class="mb-0">Create account</h5>
+            <p class="mb-0 small opacity-75">Get started with our platform</p>
+        </div>
+        <div class="auth-body">
+            <form>
+                <div class="mb-3">
+                    <label for="register-name" class="form-label small">Full name</label>
+                    <input type="text" class="form-control" id="register-name" placeholder="John Doe" required>
+                </div>
+                <div class="mb-3">
+                    <label for="register-email" class="form-label small">Email</label>
+                    <input type="email" class="form-control" id="register-email" placeholder="email@example.com"
+                        required>
+                </div>
+                <div class="mb-3 position-relative">
+                    <label for="register-password" class="form-label small">Password</label>
+                    <input type="password" class="form-control" id="register-password" placeholder="••••••••" required>
+                    <i class="far fa-eye password-toggle" id="toggle-register-password"></i>
+                    <div class="form-text">Minimum 8 characters</div>
+                </div>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" id="terms" required
+                        style="width: 14px; height: 14px;">
+                    <label class="form-check-label small" for="terms">
+                        I agree to the <a href="#" class="text-decoration-none">Terms</a>
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-auth w-100 mb-3 text-white">Create Account</button>
+                <div class="divider small">or sign up with</div>
+                <div class="d-flex justify-content-center gap-2 mb-3">
+                    <button type="button" class="social-btn">
+                        <i class="fab fa-google"></i>
+                    </button>
+                    <button type="button" class="social-btn">
+                        <i class="fab fa-apple"></i>
+                    </button>
+                    <button type="button" class="social-btn">
+                        <i class="fab fa-facebook-f"></i>
+                    </button>
+                </div>
+                <div class="text-center small">
+                    Already have an account? <span class="auth-switch" onclick="showLogin()">Sign in</span>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Bootstrap 5.3 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/custom.js"></script>
+</body>
+
+</html>

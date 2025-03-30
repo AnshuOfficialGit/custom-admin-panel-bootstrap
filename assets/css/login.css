@@ -1,0 +1,125 @@
+:root {
+    --primary-color: #6366f1;
+    --primary-hover: #4f46e5;
+    --dark-color: #0f172a;
+    --light-color: #ffffff;
+}
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+.auth-card {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    animation: fadeIn 0.4s ease-out;
+    border: none;
+}
+.auth-header {
+    background: linear-gradient(135deg, var(--primary-color), #8b5cf6);
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+}
+.auth-body {
+    padding: 1.5rem;
+    background-color: var(--light-color);
+}
+.form-control {
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    font-size: 0.9rem;
+}
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+.btn-auth {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 0.6rem;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+.btn-auth:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-1px);
+}
+.auth-switch {
+    color: var(--primary-color);
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+.auth-switch:hover {
+    text-decoration: underline;
+}
+.divider {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    color: #94a3b8;
+    font-size: 0.8rem;
+}
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #e2e8f0;
+}
+.divider::before {
+    margin-right: 0.5rem;
+}
+.divider::after {
+    margin-left: 0.5rem;
+}
+.social-btn {
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    background: white;
+    color: #64748b;
+    transition: all 0.2s ease;
+}
+.social-btn:hover {
+    background: #f1f5f9;
+    transform: translateY(-1px);
+    color: var(--dark-color);
+}
+.form-text {
+    font-size: 0.75rem;
+}
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Password toggle */
+.password-toggle {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 72%;
+    transform: translateY(-50%);
+    color: #94a3b8;
+    z-index: 5;
+}
